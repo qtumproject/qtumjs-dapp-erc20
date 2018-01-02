@@ -1,6 +1,8 @@
 import { autorun, computed, observable, toJS } from "mobx"
-import { QtumRPC, Contract, IDecodedLog, IContractLogEntry } from "qtumjs"
+import { QtumRPC, Contract, IDecodedLog, IContractLog } from "qtumjs"
 import { EventEmitter } from "eventemitter3"
+
+import { ITransferLog } from "./types"
 
 // QTUM_RPC defined in config/[env].js
 const rpc = new QtumRPC(QTUM_RPC)
@@ -10,6 +12,7 @@ const myToken = new Contract(rpc, SOLAR_REPO.contracts["zeppelin-solidity/contra
 
 export class Store {
   @observable public totalSupply: number = 0
+  @observable.shallow public transferEvents: ITransferLog[] = []
 
   private emitter: EventEmitter
 
@@ -25,14 +28,16 @@ export class Store {
   }
 
   private async observeEvents() {
-    this.emitter = myToken.logEmitter({ minconf: 1 })
+    this.emitter = myToken.logEmitter({ minconf: 0 })
 
     this.emitter.on("Mint", () => {
       this.updateTotalSupply()
     })
 
-    this.emitter.on("Transfer", (entry: IContractLogEntry) => {
-      console.log("transfer", entry)
+    // typing here is not very nice...
+    this.emitter.on("Transfer", (log: ITransferLog) => {
+      this.transferEvents.push(log)
+      // console.log("transfer", entry)
     })
   }
 }
