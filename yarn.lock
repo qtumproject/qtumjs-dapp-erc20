@@ -4450,9 +4450,9 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
-qtumjs@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/qtumjs/-/qtumjs-1.4.1.tgz#bc582d12420632d941f771472511789efe179236"
+qtumjs@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/qtumjs/-/qtumjs-1.4.2.tgz#83bb63a9a497924379740c1ca8831b0d8e175eca"
   dependencies:
     axios "^0.17.1"
     btoa "^1.1.2"
