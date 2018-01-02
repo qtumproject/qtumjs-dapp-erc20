@@ -10,11 +10,23 @@ export function TransferLog(props: { log: ITransferLog }) {
   } = props.log.event
 
   const {
+    blockNumber,
+    blockHash,
     transactionHash,
   } = props.log
 
   return (
     <table className="table is-bordered"><tbody>
+      <tr>
+        <td>Block #</td>
+        <td>{blockNumber}</td>
+      </tr>
+
+      <tr>
+        <td>Block Hash</td>
+        <td>{blockHash}</td>
+      </tr>
+
       <tr>
         <td>Tx ID</td>
         <td>{transactionHash}</td>
