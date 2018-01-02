@@ -25,8 +25,6 @@ export class Store {
   }
 
   private async observeEvents() {
-    // TODO: myToken.eventsEmitter({ minconf: 1 })
-    // emitter.on("Mint", () => {})
     this.emitter = myToken.logEmitter({ minconf: 1 })
 
     this.emitter.on("Mint", () => {
