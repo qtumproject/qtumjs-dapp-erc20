@@ -16,6 +16,15 @@ function main() {
   const store = new Store()
   store.init()
 
+  if (process.env.NODE_ENV === "development") {
+    Object.assign(window, {
+      store,
+    })
+
+    store.transferEvents.push(require("./mock/transferLog").default)
+    store.transferEvents.push(require("./mock/transferLog").default)
+  }
+
   render(
     <Provider store={store}>
       <App />

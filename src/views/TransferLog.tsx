@@ -14,10 +14,26 @@ export function TransferLog(props: { log: ITransferLog }) {
   } = props.log
 
   return (
-    <p>
-      {transactionHash}
-      <br/>
-      {from} => {to} ({value.toNumber()})
-    </p>
+    <table className="table is-bordered"><tbody>
+      <tr>
+        <td>Tx ID</td>
+        <td>{transactionHash}</td>
+      </tr>
+
+      <tr>
+        <td>From</td>
+        <td>{from}</td>
+      </tr>
+
+      <tr>
+        <td>To</td>
+        <td>{to}</td>
+      </tr>
+
+      <tr>
+        <td>Value</td>
+        <td>{value.toNumber()}</td>
+      </tr>
+    </tbody></table>
   )
 }
