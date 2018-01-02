@@ -34,10 +34,8 @@ export class Store {
       this.updateTotalSupply()
     })
 
-    // typing here is not very nice...
     this.emitter.on("Transfer", (log: ITransferLog) => {
-      this.transferEvents.push(log)
-      // console.log("transfer", entry)
+      this.transferEvents.unshift(log)
     })
   }
 }

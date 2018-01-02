@@ -22,7 +22,6 @@ function main() {
     })
 
     store.transferEvents.push(require("./mock/transferLog").default)
-    store.transferEvents.push(require("./mock/transferLog").default)
   }
 
   render(
