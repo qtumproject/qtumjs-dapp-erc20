@@ -49,7 +49,7 @@ export class MintForm extends React.Component<{ store?: Store }, {}> {
         <div className="field is-grouped">
           <div className="control">
             <button className="button is-link" onClick={onSubmit}>
-              Submit
+              Mint Tokens
             </button>
           </div>
           {/* <div className="control">
