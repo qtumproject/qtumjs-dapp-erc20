@@ -3,6 +3,7 @@ import { observer, inject } from "mobx-react"
 
 import { Store } from "../Store"
 import { TransferLog } from "./TransferLog"
+import { MintForm } from "./MintForm"
 
 const css = {
   button: {
@@ -31,6 +32,13 @@ export class App extends React.Component<{ store?: Store }, {}> {
         <section className="section">
           <div className="container content">
             <h1> Total Supply: {totalSupply} </h1>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container content">
+            <h1> Mint New Tokens </h1>
+            <MintForm />
           </div>
         </section>
 
