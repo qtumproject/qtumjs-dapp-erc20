@@ -1,12 +1,13 @@
 import * as React from "react"
-import { observer } from "mobx-react"
+import { inject, observer } from "mobx-react"
 import * as cx from "classnames"
 
 import { MintFormState } from "./MintFormState"
+import { Store } from "../Store"
 
-@observer
-export class MintForm extends React.Component<{}, {}> {
-  public data = new MintFormState()
+@inject("store") @observer
+export class MintForm extends React.Component<{ store?: Store }, {}> {
+  public data = new MintFormState(this.props.store!)
 
   public render() {
     const {

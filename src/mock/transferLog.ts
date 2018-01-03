@@ -1,4 +1,4 @@
-/* tslint:disable  */
+/* tslint:disable */
 import BN from "bn.js"
 
 export default

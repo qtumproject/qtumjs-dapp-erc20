@@ -1,4 +1,4 @@
-import { IContractLog } from "qtumjs"
+import { IContractLog, IRPCGetTransactionResult } from "qtumjs"
 import BN from "bn.js"
 
 export type ITransferLog = IContractLog<{
@@ -7,3 +7,11 @@ export type ITransferLog = IContractLog<{
   to: string,
   value: BN,
 }>
+
+// ITxRecord tracks transactions made by the app
+export interface ITxRecord {
+  tx: IRPCGetTransactionResult | null
+  method: string
+  params: { [key: string]: any }
+  error?: Error
+}

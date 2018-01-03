@@ -1,6 +1,8 @@
 import * as React from "react"
 import { FormState, FieldState } from "formstate"
 
+import { Store } from "../Store"
+
 function ishex160(s: string): boolean {
   // FIXME: verify is hexadecimal...
   return s.slice(0, 2) === "0x" && s.length === 42
@@ -20,6 +22,9 @@ export class MintFormState {
     address: this.address,
   })
 
+  constructor(private store: Store) {
+  }
+
   public onSubmit = async () => {
     const res = await this.form.validate()
 
@@ -33,5 +38,6 @@ export class MintFormState {
     const address = this.address.$
 
     console.log("mint", [address, amount])
+    this.store.mintTokens(address, amount)
   }
 }

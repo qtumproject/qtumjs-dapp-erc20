@@ -21,7 +21,8 @@ function main() {
       store,
     })
 
-    store.transferEvents.push(require("./mock/transferLog").default)
+    // store.transferEvents.push(require("./mock/transferLog").default)
+    // store.txRecords.push(require("./mock/txRecord").default)
   }
 
   render(

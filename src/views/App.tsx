@@ -4,6 +4,7 @@ import { observer, inject } from "mobx-react"
 import { Store } from "../Store"
 import { TransferLog } from "./TransferLog"
 import { MintForm } from "./MintForm"
+import { TxRecord } from "./TxRecord"
 
 const css = {
   button: {
@@ -17,6 +18,7 @@ export class App extends React.Component<{ store?: Store }, {}> {
     const {
       totalSupply,
       transferEvents,
+      txRecords,
     } = this.props.store!
 
     return (
@@ -44,9 +46,22 @@ export class App extends React.Component<{ store?: Store }, {}> {
 
         <section className="section">
           <div className="container content">
-            <h1> Transfers </h1>
+            <h1> Transaction Records </h1>
+            {txRecords.length === 0 && "no transaction made"}
             {
-              transferEvents.map((log) => <TransferLog key={log.transactionHash} log={log}/>)
+              txRecords.map((txRecord, i) => {
+                return <TxRecord key={i} txRecord={txRecord} />
+              })
+            }
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container content">
+            <h1> Transfers </h1>
+            {transferEvents.length === 0 && "no transfer event observed yet"}
+            {
+              transferEvents.map((log) => <TransferLog key={log.transactionHash} log={log} />)
             }
           </div>
         </section>
