@@ -34,12 +34,12 @@ export class Store {
     // txRecords is an observable array. Adding an object into the array
     // will recursively convert the object into an observable.
     this.txRecords.unshift({
-      tx: null,
       method: "mint",
       params: {
         toAddress,
         amount,
       },
+      tx: undefined,
       error: undefined,
     })
 

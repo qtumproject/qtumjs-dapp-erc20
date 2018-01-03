@@ -10,7 +10,7 @@ export type ITransferLog = IContractLog<{
 
 // ITxRecord tracks transactions made by the app
 export interface ITxRecord {
-  tx: IRPCGetTransactionResult | null
+  tx?: IRPCGetTransactionResult
   method: string
   params: { [key: string]: any }
   error?: Error
