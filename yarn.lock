@@ -6,18 +6,7 @@
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.3.tgz#3f0ff6873da793870e20a260cada55982f38a9e5"
 
-"@types/node@*":
-  version "8.0.32"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.32.tgz#869a716538b6eec65ab3893f183d557be3cda206"
-
-"@types/react-dom@^16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.0.tgz#7fac396cbd1cf44e112b957c8ef9c7ef401a90b3"
-  dependencies:
-    "@types/node" "*"
-    "@types/react" "*"
-
-"@types/react@*", "@types/react@^16.0.9":
+"@types/react@^16.0.9":
   version "16.0.9"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.9.tgz#2ad952abbb22617620927694f9a4bce292d7fb2b"
 
@@ -1192,6 +1181,13 @@ buffer@^4.3.0:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
+buffer@^5.0.8:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.2.0.tgz#53cf98241100099e9eeae20ee6d51d21b16e541e"
+  dependencies:
+    base64-js "^1.0.2"
+    ieee754 "^1.1.4"
+
 builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
@@ -2076,14 +2072,6 @@ esutils@^2.0.2:
 etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
-
-ethjs-abi@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/ethjs-abi/-/ethjs-abi-0.2.1.tgz#e0a7a93a7e81163a94477bad56ede524ab6de533"
-  dependencies:
-    bn.js "4.11.6"
-    js-sha3 "0.5.5"
-    number-to-bn "1.7.0"
 
 event-emitter@~0.3.5:
   version "0.3.5"
@@ -4462,14 +4450,23 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
-qtumjs@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/qtumjs/-/qtumjs-1.4.3.tgz#749ee2a215dfb6b0cbcd0f603576aae07b22ac86"
+qtumjs-ethjs-abi@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/qtumjs-ethjs-abi/-/qtumjs-ethjs-abi-1.0.3.tgz#d2aecd89abfa4e118de48af9a741855cd89947dd"
+  dependencies:
+    bn.js "4.11.6"
+    buffer "^5.0.8"
+    js-sha3 "0.5.5"
+    number-to-bn "1.7.0"
+
+qtumjs@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/qtumjs/-/qtumjs-1.9.1.tgz#dea430e0860195d77b5b6113d12ffd0a0bddf2a9"
   dependencies:
     axios "^0.17.1"
     btoa "^1.1.2"
-    ethjs-abi "^0.2.1"
     eventemitter3 "^2.0.3"
+    qtumjs-ethjs-abi "^1.0.3"
     url-parse "^1.1.9"
 
 query-string@^4.1.0:

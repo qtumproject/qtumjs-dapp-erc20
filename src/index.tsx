@@ -6,7 +6,6 @@ import "./index.css"
 import * as React from "react"
 import { render } from "react-dom"
 
-import { autorun } from "mobx"
 import { Provider } from "mobx-react"
 
 import { App } from "./views/App"
