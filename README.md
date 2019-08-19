@@ -1,4 +1,4 @@
-[QtumBook Companion Guide](https://github.com/qtumproject/qtumbook/blob/master/part2/erc20-dapp.md)
+[QtumBook Companion Guide](https://github.com/qtumproject/qtumbook/blob/master/en/part2/erc20-dapp.md)
 
 # The DApp Dev Server
 
