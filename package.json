@@ -8,12 +8,10 @@
     "build": "neutrino build"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "config": "^1.28.0",
-    "neutrino": "^7.0.2",
-    "neutrino-preset-react": "^7.0.2",
-    "neutrino-preset-react-typescript": "^1.0.1",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.3"
+    "typescript": "^3.5.3"
   },
   "dependencies": {
     "@types/classnames": "^2.2.3",
@@ -25,7 +23,7 @@
     "mobx": "^3.4.1",
     "mobx-react": "^4.3.5",
     "normalize.css": "^7.0.0",
-    "qtumjs": "^1.9.1",
+    "qtumjs": "^1.9.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   }
