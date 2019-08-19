@@ -9,7 +9,7 @@ Let's get the DApp running. First, install [npm](https://www.npmjs.com/) depende
 yarn install
 ```
 
-Install parcel bundler:
+Install [parcel](https://parceljs.org/getting_started.html) bundler:
 
 ```
 yarn global add parcel-bundler
