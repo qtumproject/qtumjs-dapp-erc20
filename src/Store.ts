@@ -6,7 +6,10 @@ import { TxRecord } from "./views/TxRecord"
 
 // QTUM_RPC defined in config/[env].js
 // SOLAR_REPO is `solar.[env].json`. defined in config/*.js
-const qtum = new Qtum(QTUM_RPC, SOLAR_REPO)
+const QTUM_RPC = "http://localhost:9888"
+import * as repo from "../solar.json"
+
+const qtum = new Qtum(QTUM_RPC, repo as any)
 const myToken = qtum.contract("zeppelin-solidity/contracts/token/ERC20/CappedToken.sol")
 
 export class Store {

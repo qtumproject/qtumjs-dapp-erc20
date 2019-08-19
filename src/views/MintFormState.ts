@@ -1,4 +1,3 @@
-import * as React from "react"
 import { FormState, FieldState } from "formstate"
 
 import { Store } from "../Store"

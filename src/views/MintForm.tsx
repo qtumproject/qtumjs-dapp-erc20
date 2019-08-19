@@ -1,6 +1,6 @@
-import * as React from "react"
+import React from "react"
 import { inject, observer } from "mobx-react"
-import * as cx from "classnames"
+import cx from "classnames"
 
 import { MintFormState } from "./MintFormState"
 import { Store } from "../Store"
