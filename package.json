@@ -4,13 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "neutrino start",
+    "start": "parcel index.html",
     "build": "neutrino build"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "config": "^1.28.0",
+    "cssnano": "^4.1.10",
     "typescript": "^3.5.3"
   },
   "dependencies": {
